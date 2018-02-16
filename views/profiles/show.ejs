@@ -11,22 +11,6 @@
 				<h4><%= user.name %></h4>
 			</div>
 		</div>
-		<ul class="list-group">
-			<li class="list-group-item">Teach</li> 
-			<% user.languagesOffered.forEach((language) => { %>
-				<li class="list-group-item container-vertically-aligned">
-					<img class="flag" src="<%= language.flagImgPath %>" alt="<%= language.name %>" title="<%= language.name %>"/><%= language.name %>
-				</li>
-			<% }); %>
-		</ul>
-		<ul class="list-group">
-			<li class="list-group-item">Learn</li> 
-			<% user.languagesDemanded.forEach((language) => { %>
-				<li class="list-group-item container-vertically-aligned">
-					<img class="flag" src="<%= language.flagImgPath %>" alt="<%= language.name %>" title="<%= language.name %>"/><%= language.name %>
-				</li>
-			<% }); %>
-		</ul>
 		<div class="list-group">
 			<div class="list-group-item">
 				<span>Others</span>
