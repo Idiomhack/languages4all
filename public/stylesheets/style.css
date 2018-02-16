@@ -1,0 +1,54 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.container-vertically-aligned {
+	display: flex;
+}
+
+img.little-profile {
+	height: 100px;
+}
+
+img.flag {
+	width: 20px;
+	height: 15px;
+	margin-right: 5px;
+}
+
+#languagesDemanded, #languagesOffered {
+	max-height: 300px;
+	overflow-y: scroll;
+}
+
+.list-group-item {
+	margin-bottom: -2px;
+}
+
+.navbar-nav > li > a:last-child {
+	padding-right: 0;
+}
+
+p {
+	white-space: pre-line;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.container-body {
+	margin-top: 80px;
+}
+
+.title {
+	font-weight: 700;
+}
