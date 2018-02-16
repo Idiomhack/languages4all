@@ -28,8 +28,6 @@ authRoutes.post("/signup", upload.single('photo'), (req, res, next) => {
 		city: req.body.city,
 		description: req.body.description,
 		interests: req.body.interests,
-		languagesOffered: JSON.parse(req.body.languagesOffered),
-		languagesDemanded: JSON.parse(req.body.languagesDemanded),
 		imageUrl: req.body.imageUrl
 	};
 

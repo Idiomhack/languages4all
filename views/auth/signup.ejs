@@ -49,46 +49,12 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="description" class="control-label">Description</label>
+        <label for="description" class="control-label">Languages Offered</label>
         <textarea class="form-control" name="description" id="description" rows="5"><%= userInfo.description %></textarea>
       </div>
       <div class="form-group">
-        <label for="interests" class="control-label">Interests</label>
+        <label for="interests" class="control-label">Languages Demanded</label>
         <textarea class="form-control" name="interests" id="interests" rows="5"><%= userInfo.interests %></textarea>
-      </div>
-      <div class="row">
-        <div class="form-group col-sm-6">
-          <label for="languagesOffered" class="control-label">Offered languages</label>
-          <ol class="list-group" id="languagesOffered">
-            <% languages.forEach((language) => { %>
-            <li id="<%= language._id %>" class="list-group-item <% if(userInfo.languagesOffered && userInfo.languagesOffered.indexOf(language._id.toString()) > -1) { %>active<% } %>">
-                <div class="container-vertically-aligned">
-                <img class="flag" src="<%= language.flagImgPath %>" />
-                <span>
-                  <%= language.name %>
-                </span>
-              </div>
-            </li>
-            <% }); %>
-          </ol>
-          <input id="hiddenLanguagesOffered" type="hidden" name="languagesOffered"/>
-        </div>
-        <div class="form-group col-sm-6">
-          <label for="languagesDemanded" class="control-label">Demanded languages</label>
-          <ol class="list-group" id="languagesDemanded">
-            <% languages.forEach((language) => { %>
-            <li id="<%= language._id %>" class="list-group-item  <% if(userInfo.languagesDemanded && userInfo.languagesDemanded.indexOf(language._id.toString()) > -1) { %>active<% } %>">
-                <div class="container-vertically-aligned">
-                <img class="flag" src="<%= language.flagImgPath %>" />
-                <span>
-                  <%= language.name %>
-                </span>
-              </div>
-            </li>
-            <% }); %>
-          </ol>
-          <input id="hiddenLanguagesDemanded" type="hidden" name="languagesDemanded"/>
-        </div>
       </div>
       <button onclick="submitMyForm()" class="btn btn-primary">Sign up</button>
 
